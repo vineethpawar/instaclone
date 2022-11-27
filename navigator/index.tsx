@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 
 
@@ -13,7 +14,7 @@ const Navigator = () => {
 
     const Screens = {
         Home: HomeScreen,
-        Search: HomeScreen,
+        Search: SearchScreen,
         Reels: HomeScreen,
         Notifications: HomeScreen,
         Profile: HomeScreen,
@@ -72,15 +73,17 @@ const Navigator = () => {
           component={Screens?.Home}
         />
         <Tab.Screen
+
           options={{
-            headerShown: false,
+            headerStatusBarHeight:0,
           }}
+
           name="Search"
           component={Screens?.Search}
         />
         <Tab.Screen
           options={{
-            headerShown: false,
+            headerStatusBarHeight:0,
           }}
           name="Reels"
           component={Screens?.Reels}
